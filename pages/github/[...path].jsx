@@ -1,6 +1,7 @@
 import { GithubRawContentUrl } from '../../utils/github/constants';
 import { parsePath } from '../../utils/common/parsePath';
 import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
 
 export async function getServerSideProps(context) {
   const { path } = context.query;
@@ -18,7 +19,7 @@ export async function getServerSideProps(context) {
 }
 
 export const GithubMarkDown = ({ content }) => {
-  return <div>{ content }</div>
+  return <ReactMarkdown>{ content }</ReactMarkdown>
 }
 
 export default GithubMarkDown
