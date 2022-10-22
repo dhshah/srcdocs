@@ -16,8 +16,9 @@ A markdown renderer for code repos to encourage docs-as-code.
 ## Features
 
 - [x] Renders markdown from public github repos
-- [ ] add initial jest tests
+- [x] add initial jest tests
 - [ ] explicitly require the srcdocs folder name in the path for rendering
+        - or gate below functionality behind that folder name
 - [ ] add support for a header
 - [ ] add support for a footer
 - [ ] add support for a default site map
