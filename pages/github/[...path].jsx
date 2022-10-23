@@ -7,19 +7,19 @@ export async function getServerSideProps(context) {
   const { path } = context.query;
 
   if (!path) {
-    return { props: { error: `Invalid path: ${path}`} }
+    return { props: { error: `Invalid path: ${path}`} };
   }
 
   const pathArr = parsePath(path);
   const rawContent = await fetch(`${GithubRawContentUrl}/${pathArr.join('/')}`)
-    .then(response => response.text())
+    .then(response => response.text());
 
   const { content } = matter(rawContent);
   return { props: { content } };
 }
 
 export const GithubMarkDown = ({ content }) => {
-  return <ReactMarkdown>{ content }</ReactMarkdown>
-}
+  return <ReactMarkdown>{ content }</ReactMarkdown>;
+};
 
-export default GithubMarkDown
+export default GithubMarkDown;

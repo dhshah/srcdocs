@@ -40,4 +40,4 @@ module.exports = {
   transformIgnorePatterns: [
     '^.+\\.module\\.(css|sass|scss)$',
   ],
-}
+};
