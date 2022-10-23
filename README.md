@@ -2,6 +2,10 @@
 
 A markdown renderer for code repos to encourage docs-as-code.
 
+## Badges
+
+![tests](https://github.com/dhshah/srcdocs/actions/workflows/test_ci.yml/badge.svg)
+
 ## How to develop
 
 - `yarn run dev`
