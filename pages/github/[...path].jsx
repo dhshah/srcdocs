@@ -7,7 +7,7 @@ export async function getServerSideProps(context) {
   const { path } = context.query;
 
   if (!path) {
-    return { props: { content: `Invalid path: ${path}`} }
+    return { props: { error: `Invalid path: ${path}`} }
   }
 
   const pathArr = parsePath(path);
